@@ -2,9 +2,9 @@ import { fetchAPI } from "./index";
 
 import { ListEmployee } from "@/types/employee";
 
-export const getEmployees = async (): Promise<ListEmployee[]> => {
+export const getListEmployees = async (): Promise<ListEmployee[]> => {
   const response = await fetchAPI({
-    url: "/employees",
+    url: "employees",
     options: {
       method: "GET",
     },
