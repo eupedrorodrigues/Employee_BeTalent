@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { formatDate, formatNumber } from "@/utils/formatters";
+
 import { ListEmployee } from "@/types/employee";
 import { getListEmployees } from "@/services/employee";
 export const TableEmployees = () => {
@@ -45,8 +47,10 @@ export const TableEmployees = () => {
               </td>
               <td className="p-3 text-black">{employee.name}</td>
               <td className="p-3 text-black">{employee.job}</td>
-              <td className="p-3 text-black">{employee.admission_date}</td>
-              <td className="p-3 text-black">{employee.phone}</td>
+              <td className="p-3 text-black">
+                {formatDate(employee.admission_date)}
+              </td>
+              <td className="p-3 text-black">{formatNumber(employee.phone)}</td>
             </tr>
           ))}
         </tbody>
