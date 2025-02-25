@@ -1,29 +1,12 @@
-import { useState, useEffect } from "react";
-
 import { formatDate, formatNumber } from "@/utils/formatters";
 
-import { ListEmployee } from "@/types/employee";
-import { getListEmployees } from "@/services/employee";
-export const TableEmployees = () => {
-  const [employees, setEmployees] = useState<ListEmployee[]>([]);
+import { TableEmployeesProps } from "@/types/employee";
 
-  const fetchEmployees = async () => {
-    try {
-      const response = await getListEmployees();
-      setEmployees(response);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  useEffect(() => {
-    fetchEmployees();
-  }, []);
-
+export const TableEmployees = ({ employees }: TableEmployeesProps) => {
   return (
     <>
       <table className="w-[60.063rem] rounded-lg">
-        <thead className="border-b border-gray-400 ">
+        <thead className="border-b border-[#f0f0f0] shadow-md">
           <tr className="bg-blue-700 text-white h-[2.9375rem] rounded-3xl">
             <th className="p-3 text-left">FOTO</th>
             <th className="p-3 text-left">NOME</th>
@@ -36,7 +19,7 @@ export const TableEmployees = () => {
           {employees.map((employee, index) => (
             <tr
               key={index}
-              className="border-b border-gray-400 bg-white hover:bg-gray-100"
+              className="border-b border-[#f0f0f0]  bg-white hover:bg-gray-100"
             >
               <td className="p-3">
                 <img
