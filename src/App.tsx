@@ -1,5 +1,4 @@
-function App() {
-  return <></>;
+import { Employees } from "@/modules/pages";
+export function App() {
+  return Employees;
 }
-
-export default App;
