@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import { Header } from "@/modules/components/header";
 import { EmployeeSearch } from "@/modules/components/search";
 import { TableEmployees } from "@/modules/components/table-employees";
 
+import { Logo } from "@/constants";
 import { ListEmployee } from "@/types/employee";
 import { getListEmployees } from "@/services/employee";
 
@@ -45,13 +45,21 @@ export const Employees = () => {
 
   return (
     <>
-      <Header />
-      <main>
-        <div className="flex items-center justify-between py-10">
-          <h1 className="text-black text-xl">Funcionários</h1>
+      <header className="fixed top-0 left-0 w-full h-[3.75rem] bg-white flex items-center px-4 shadow-md">
+        <img src={Logo.logo} alt={Logo.title} />
+      </header>
+      <main className="w-screen flex-col items-center justify-center mt-[2.5em] lg:px-8 ">
+        <div className="flex flex-col sm:flex-row items-center justify-between mb-[2.5em] gap-2 sm:gap-0">
+          <h1 className="text-black text-xl font-semibold">Funcionários</h1>
           <EmployeeSearch onSearch={setSearchTerm} />
         </div>
-        <TableEmployees employees={filteredEmployees} />
+        {filteredEmployees.length === 0 ? (
+          <div className="text-center text-gray-500">
+            Usuário não cadastrado
+          </div>
+        ) : (
+          <TableEmployees employees={filteredEmployees} />
+        )}
       </main>
     </>
   );
