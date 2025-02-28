@@ -22,10 +22,10 @@ export const EmployeeSearch = ({ onSearch }: EmployeeSearchProps) => {
     }
   };
   return (
-    <div className="bg-white flex h-12 w-full md:w-[17.938em] items-center rounded-md border-2 border-[#DFDFDF] text-center">
+    <div className="bg-white flex h-12 w-full md:w-[17.938em] items-center rounded-md border-2 border-[#DFDFDF]">
       <input
         type="text"
-        className="h-full w-full text-black border-none pl-5 bg-transparent outline-none"
+        className="h-full w-full text-black pl-4 bg-transparent outline-none"
         placeholder="Pesquisar"
         value={searchTerm}
         onChange={handleInputChange}

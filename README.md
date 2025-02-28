@@ -5,9 +5,13 @@
 ![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 <div align="center">
-  <img src="./public/images/Macbook.png" width="450px" />
-  <img src="./public/images/iPh0ne.png" height="250px" />
+  <img src="./public/images/Mac.png" width="450px" />
+  <img src="./public/images/iPhone14.png" height="250px" />
 </div>
+
+</br>
+
+Projeto desenvolvido para gerenciar funcionários fornecidos por uma API simulada com `json-server`, permitindo a busca por nome, cargo e telefone na base de dados da empresa BeTalent.
 
 ## Índice
 
