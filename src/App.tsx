@@ -1,5 +1,5 @@
-function App() {
-  return <></>;
+"use client";
+import { Employees } from "@/modules/pages";
+export function App() {
+  return <Employees />;
 }
-
-export default App;

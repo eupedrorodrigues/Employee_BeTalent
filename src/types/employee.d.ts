@@ -6,3 +6,11 @@ export interface ListEmployee {
   phone: string;
   image: string;
 }
+
+export interface TableEmployeesProps {
+  employees: ListEmployee[];
+}
+
+export interface EmployeeSearchProps {
+  onSearch: (term: string) => void;
+}
