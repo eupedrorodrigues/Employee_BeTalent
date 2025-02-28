@@ -23,7 +23,7 @@ export const EmployeeSearch = ({ onSearch }: EmployeeSearchProps) => {
     }
   };
   return (
-    <div className="bg-white flex h-12 w-[17.938em] items-center rounded-md border border-solid text-center">
+    <div className="bg-white flex h-12 w-full md:w-[17.938em] items-center rounded-md border-2 border-[#DFDFDF] text-center">
       <input
         type="text"
         className="h-full w-full text-black border-none pl-5 bg-transparent outline-none"
@@ -33,7 +33,7 @@ export const EmployeeSearch = ({ onSearch }: EmployeeSearchProps) => {
         onKeyDown={handleKeyDown}
       />
       <button className="h-[3em]" onClick={handleSearchClick}>
-        <img src={Search.icon} alt={Search.title} width={24} height={24} />
+        <img src={Search.icon} alt={Search.title} width={31.63} />
       </button>
     </div>
   );
