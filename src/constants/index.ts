@@ -17,8 +17,3 @@ export const ArrowDown = {
   title: "Arrow Down Icon",
   icon: "/images/VectorDown.svg",
 };
-
-export const ArrowUp = {
-  title: "Arrow Up Icon",
-  icon: "/images/VectorUp.svg",
-};

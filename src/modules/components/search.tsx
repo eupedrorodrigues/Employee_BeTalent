@@ -1,4 +1,6 @@
+"use client";
 import { useState } from "react";
+
 import { Search } from "@/constants";
 import { EmployeeSearchProps } from "@/types/employee";
 
@@ -10,11 +12,8 @@ export const EmployeeSearch = ({ onSearch }: EmployeeSearchProps) => {
     setSearchTerm(value);
   };
   const handleSearchClick = () => {
-    if (searchTerm.trim() === "") {
-      onSearch("");
-    } else {
-      onSearch(searchTerm);
-    }
+    if (searchTerm.trim() === "") onSearch("");
+    else onSearch(searchTerm);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

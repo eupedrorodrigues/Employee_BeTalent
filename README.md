@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Employees 🧑‍💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+<div align="center">
+  <img src="./public/images/Macbook.png" width="450px" />
+  <img src="./public/images/iPh0ne.png" height="250px" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Índice
 
-## Expanding the ESLint configuration
+- [Instalação](#instalação)
+- [Configuração](#configuração)
+- [Uso](#uso)
+- [Estrutura](#Estrutura)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instalação
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone o repositório:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/eupedrorodrigues/Employee_BeTalent.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Configuração
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Após o download, vá até o diretório onde salvou o projeto
+2. Instale as dependências com `npm install` ou `yarn install`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Usage
+
+1. Abra o terminal
+
+```
+npm run dev
+```
+
+## Estrutura
+
+```
+📂 public/images    # Contém as imagens do projeto
+├──
+📂 src
+ ├── 📂 constants   # Define constantes globais
+ ├── 📂 modules     # Contém os components e a página
+ ├── 📂 services    # Estrutura e chamada da API
+ ├── 📂 types       # Tipagem global
+ ├── 📂 utils       # Contém funções utilitárias reutilizáveis
+ ├── 📄 App.tsx
+ ├── 📄 index.css
+ ├── 📄 main.tsx
+ ├── 📄 vite-env.d.ts
+
 ```

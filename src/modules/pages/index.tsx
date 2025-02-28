@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from "react";
 
 import { EmployeeSearch } from "@/modules/components/search";
@@ -25,23 +26,24 @@ export const Employees = () => {
   };
 
   useEffect(() => {
-    if (searchTerm) {
-      const filtered = employees.filter((employee) => {
-        return (
-          employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          employee.job.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          employee.phone.includes(searchTerm)
-        );
-      });
-      setFilteredEmployees(filtered);
-    } else {
-      setFilteredEmployees(employees);
-    }
-  }, [searchTerm, employees]);
-
-  useEffect(() => {
     fetchEmployees();
   }, []);
+
+  useEffect(() => {
+    const filterEmployees = () => {
+      if (!searchTerm) return setFilteredEmployees(employees);
+
+      setFilteredEmployees(
+        employees.filter(({ name, job, phone }) =>
+          [name, job, phone].some((field) =>
+            field.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+        )
+      );
+    };
+
+    filterEmployees();
+  }, [searchTerm, employees]);
 
   return (
     <div>
